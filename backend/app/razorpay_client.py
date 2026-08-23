@@ -29,8 +29,15 @@ def create_payment_link(amount: int, currency: str, description: str,
         "customer": {"name": customer.get("name", ""), "email": customer.get("email", "")},
         "notify": {"sms": False, "email": False},  # synthetic contacts — never actually notify
     }
-    resp = httpx.post(f"{API}/payment_links", json=payload,
-                      auth=(key_id, key_secret), timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-    return {"mode": "test", "id": data["id"], "short_url": data["short_url"], "status": data["status"]}
+    try:
+        resp = httpx.post(f"{API}/payment_links", json=payload,
+                          auth=(key_id, key_secret), timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+        return {"mode": "test", "id": data["id"], "short_url": data["short_url"], "status": data["status"]}
+    except Exception as exc:
+        # A flaky gateway call must never take down ingestion — degrade to a
+        # mock link and record why, so the audit trail shows the truth.
+        return {"mode": "mock-fallback", "id": f"plink_mock_{uuid.uuid4().hex[:12]}",
+                "short_url": f"https://rzp.io/mock/{uuid.uuid4().hex[:8]}",
+                "status": "created", "error": type(exc).__name__}

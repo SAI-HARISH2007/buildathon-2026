@@ -24,7 +24,24 @@ The core design principle: **AI only where judgment is needed, rules everywhere 
 
 ## Run it
 
-> Coming as the build lands — target: one command for the backend, one for the dashboard.
+```bash
+# 1. Backend (Python 3.11+)
+pip install -r backend/requirements.txt
+python3 -m uvicorn app.main:app --app-dir backend --port 8000
+
+# 2. Dashboard
+cd frontend && npm install && npm run dev   # -> http://localhost:5173
+```
+
+In the dashboard: **Reset + ingest demo batch**, then fast-forward the sim clock and watch recovery happen. Click any payment row for its full decision audit trail.
+
+No keys needed — without a `.env`, the LLM step runs a deterministic heuristic and payment links are mocked (each decision records which engine produced it). Copy `.env.example` to `.env` and add keys to go live: Gemini for real AI triage, Razorpay test-mode for real payment links.
+
+Zero-setup CLI demo (no server, no npm):
+
+```bash
+python3 scripts/demo.py
+```
 
 ## What broke
 

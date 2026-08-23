@@ -92,7 +92,13 @@ def ingest_event(conn, event: dict) -> None:
             f"Payment retry for order {event.get('order_id')}", event["customer"], pid)
         log_action(conn, pid, fmt(now), "link_created", "system",
                    f"recovery link issued ({link['mode']} mode)", link)
-        if not message and cat in MESSAGES:
+        if message:
+            # the LLM writes a [LINK] placeholder; the real URL is substituted here
+            for placeholder in ("[LINK]", "[Payment Link]", "[payment link]"):
+                message = message.replace(placeholder, link["short_url"])
+            if link["short_url"] not in message:
+                message = f"{message.rstrip()} Pay here: {link['short_url']}"
+        elif cat in MESSAGES:
             message = MESSAGES[cat].format(name=event["customer"]["name"],
                                            rupees=event["amount"] / 100, link=link["short_url"])
     if policy.notify_customer and message:

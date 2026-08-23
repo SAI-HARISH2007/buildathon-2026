@@ -38,7 +38,8 @@ Pick ONE action from {actions}.
 Rules of thumb: small-amount UPI failures at odd hours are often transient (retry_soon);
 large card declines are often limits/funds (retry_tomorrow with a payment link);
 repeated failures deserve give_up. Draft a short, polite customer SMS (max 2 sentences,
-no pressure tactics, include nothing false).
+no pressure tactics, include nothing false). Where the payment link belongs in the
+message, write exactly the placeholder [LINK] — the system substitutes the real URL.
 
 Answer with ONLY this JSON:
 {{"action": "...", "wait_minutes": <int>, "message": "...", "reasoning": "<one sentence>"}}"""

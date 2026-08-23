@@ -40,6 +40,27 @@ def ingest(body: IngestBody):
         c.close()
 
 
+@app.post("/api/ingest/demo")
+def ingest_demo(limit: int = 200):
+    """One-click demo: ingest the bundled synthetic batch."""
+    import json
+    events = json.loads((Path(__file__).resolve().parents[2] / "data" / "events.json").read_text())
+    return ingest(IngestBody(events=events[:limit]))
+
+
+@app.post("/api/reset")
+def reset():
+    """Wipe all state for a fresh demo run."""
+    c = conn()
+    try:
+        for table in ("payments", "actions", "schedule", "clock"):
+            c.execute(f"DELETE FROM {table}")
+        c.commit()
+        return {"reset": True}
+    finally:
+        c.close()
+
+
 @app.post("/api/clock/advance")
 def advance(body: AdvanceBody):
     if not 1 <= body.minutes <= 30 * 24 * 60:
