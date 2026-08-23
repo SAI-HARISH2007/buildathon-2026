@@ -1,0 +1,3202 @@
+[
+  {
+    "event_id": "evt_synthetic_0079",
+    "payment_id": "pay_FAKE7625389037",
+    "order_id": "order_FAKE2774884818",
+    "amount": 88300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-77952"
+    },
+    "failed_at": "2026-08-20T06:09:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0043",
+    "payment_id": "pay_FAKE4803044105",
+    "order_id": "order_FAKE8638257497",
+    "amount": 21100,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-33053"
+    },
+    "failed_at": "2026-08-20T06:45:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0026",
+    "payment_id": "pay_FAKE5278201677",
+    "order_id": "order_FAKE9904586976",
+    "amount": 374500,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-76307"
+    },
+    "failed_at": "2026-08-20T07:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0015",
+    "payment_id": "pay_FAKE1945826486",
+    "order_id": "order_FAKE9894847574",
+    "amount": 42200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-17716"
+    },
+    "failed_at": "2026-08-20T08:52:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0106",
+    "payment_id": "pay_FAKE2432410914",
+    "order_id": "order_FAKE5246953455",
+    "amount": 38800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-36896"
+    },
+    "failed_at": "2026-08-20T08:54:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0052",
+    "payment_id": "pay_FAKE9950486177",
+    "order_id": "order_FAKE2840877826",
+    "amount": 144400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-33819"
+    },
+    "failed_at": "2026-08-20T09:42:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0104",
+    "payment_id": "pay_FAKE8259700175",
+    "order_id": "order_FAKE6228133486",
+    "amount": 32600,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_method_not_enabled",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-40947"
+    },
+    "failed_at": "2026-08-20T10:28:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0078",
+    "payment_id": "pay_FAKE2953462417",
+    "order_id": "order_FAKE6645808194",
+    "amount": 116100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-25194"
+    },
+    "failed_at": "2026-08-20T11:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0133",
+    "payment_id": "pay_FAKE5976777081",
+    "order_id": "order_FAKE6509985983",
+    "amount": 30800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-54350"
+    },
+    "failed_at": "2026-08-20T11:20:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0032",
+    "payment_id": "pay_FAKE9155819200",
+    "order_id": "order_FAKE5736462531",
+    "amount": 49800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-83385"
+    },
+    "failed_at": "2026-08-20T11:26:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0058",
+    "payment_id": "pay_FAKE2591589823",
+    "order_id": "order_FAKE2465576748",
+    "amount": 135900,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-74251"
+    },
+    "failed_at": "2026-08-20T11:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0132",
+    "payment_id": "pay_FAKE3799620568",
+    "order_id": "order_FAKE5560712830",
+    "amount": 15100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "gateway_technical_error",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-55015"
+    },
+    "failed_at": "2026-08-20T11:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0151",
+    "payment_id": "pay_FAKE4397788197",
+    "order_id": "order_FAKE4804440746",
+    "amount": 26000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-50642"
+    },
+    "failed_at": "2026-08-20T11:58:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0009",
+    "payment_id": "pay_FAKE4698408854",
+    "order_id": "order_FAKE8217611860",
+    "amount": 40400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-18326"
+    },
+    "failed_at": "2026-08-20T12:25:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0175",
+    "payment_id": "pay_FAKE5512036684",
+    "order_id": "order_FAKE7316122432",
+    "amount": 37300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-11071"
+    },
+    "failed_at": "2026-08-20T12:38:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0095",
+    "payment_id": "pay_FAKE8495457335",
+    "order_id": "order_FAKE9173043235",
+    "amount": 97000,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-89569"
+    },
+    "failed_at": "2026-08-20T12:41:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0080",
+    "payment_id": "pay_FAKE6169243284",
+    "order_id": "order_FAKE3358880404",
+    "amount": 108800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-67424"
+    },
+    "failed_at": "2026-08-20T13:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0170",
+    "payment_id": "pay_FAKE5973917657",
+    "order_id": "order_FAKE7080049102",
+    "amount": 33600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-36741"
+    },
+    "failed_at": "2026-08-20T14:10:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0115",
+    "payment_id": "pay_FAKE5819946657",
+    "order_id": "order_FAKE8517413631",
+    "amount": 197500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_number_invalid",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-16743"
+    },
+    "failed_at": "2026-08-20T14:11:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0110",
+    "payment_id": "pay_FAKE9583864766",
+    "order_id": "order_FAKE8934086843",
+    "amount": 31700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-99928"
+    },
+    "failed_at": "2026-08-20T14:18:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0004",
+    "payment_id": "pay_FAKE9786748825",
+    "order_id": "order_FAKE5728765136",
+    "amount": 106800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-69429"
+    },
+    "failed_at": "2026-08-20T15:29:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0119",
+    "payment_id": "pay_FAKE1131671246",
+    "order_id": "order_FAKE6218955985",
+    "amount": 135800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-69460"
+    },
+    "failed_at": "2026-08-20T15:30:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0042",
+    "payment_id": "pay_FAKE7250964836",
+    "order_id": "order_FAKE3472487690",
+    "amount": 197000,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-60328"
+    },
+    "failed_at": "2026-08-20T15:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0177",
+    "payment_id": "pay_FAKE7656585531",
+    "order_id": "order_FAKE3624410325",
+    "amount": 16400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "gateway_technical_error",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-22672"
+    },
+    "failed_at": "2026-08-20T16:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0161",
+    "payment_id": "pay_FAKE2941508568",
+    "order_id": "order_FAKE9868845806",
+    "amount": 37600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-48058"
+    },
+    "failed_at": "2026-08-20T16:06:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0129",
+    "payment_id": "pay_FAKE7417183769",
+    "order_id": "order_FAKE7977267911",
+    "amount": 178300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-51436"
+    },
+    "failed_at": "2026-08-20T16:17:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0167",
+    "payment_id": "pay_FAKE2076341629",
+    "order_id": "order_FAKE7660813178",
+    "amount": 302400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-91922"
+    },
+    "failed_at": "2026-08-20T16:46:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0047",
+    "payment_id": "pay_FAKE1594312071",
+    "order_id": "order_FAKE6288227800",
+    "amount": 45400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-30028"
+    },
+    "failed_at": "2026-08-20T17:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0120",
+    "payment_id": "pay_FAKE4793925798",
+    "order_id": "order_FAKE1668210614",
+    "amount": 48500,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-90981"
+    },
+    "failed_at": "2026-08-20T17:35:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0148",
+    "payment_id": "pay_FAKE2548781344",
+    "order_id": "order_FAKE5382302465",
+    "amount": 146100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-15706"
+    },
+    "failed_at": "2026-08-20T17:41:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0089",
+    "payment_id": "pay_FAKE4747699292",
+    "order_id": "order_FAKE2905584866",
+    "amount": 768400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-49251"
+    },
+    "failed_at": "2026-08-20T18:20:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0018",
+    "payment_id": "pay_FAKE5555296751",
+    "order_id": "order_FAKE8422620843",
+    "amount": 72200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-42591"
+    },
+    "failed_at": "2026-08-20T19:26:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0190",
+    "payment_id": "pay_FAKE1590416424",
+    "order_id": "order_FAKE5973319056",
+    "amount": 43300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-72350"
+    },
+    "failed_at": "2026-08-20T19:43:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0034",
+    "payment_id": "pay_FAKE3021598245",
+    "order_id": "order_FAKE9239688178",
+    "amount": 27800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "international_transaction_not_allowed",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-50001"
+    },
+    "failed_at": "2026-08-20T20:45:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0128",
+    "payment_id": "pay_FAKE8628842157",
+    "order_id": "order_FAKE1634323009",
+    "amount": 15100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-29194"
+    },
+    "failed_at": "2026-08-20T21:34:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0056",
+    "payment_id": "pay_FAKE2335901990",
+    "order_id": "order_FAKE3485432021",
+    "amount": 113700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-85470"
+    },
+    "failed_at": "2026-08-20T21:38:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0065",
+    "payment_id": "pay_FAKE3964229896",
+    "order_id": "order_FAKE1822662216",
+    "amount": 149000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-46241"
+    },
+    "failed_at": "2026-08-20T22:19:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0044",
+    "payment_id": "pay_FAKE2960488639",
+    "order_id": "order_FAKE8737025391",
+    "amount": 44000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "international_transaction_not_allowed",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-79616"
+    },
+    "failed_at": "2026-08-20T22:34:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0172",
+    "payment_id": "pay_FAKE6443749394",
+    "order_id": "order_FAKE2064803502",
+    "amount": 14800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-16632"
+    },
+    "failed_at": "2026-08-20T22:43:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0142",
+    "payment_id": "pay_FAKE2224336336",
+    "order_id": "order_FAKE4277561834",
+    "amount": 105700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-68893"
+    },
+    "failed_at": "2026-08-20T23:01:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0003",
+    "payment_id": "pay_FAKE2625792787",
+    "order_id": "order_FAKE7665963761",
+    "amount": 178600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-91070"
+    },
+    "failed_at": "2026-08-20T23:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0039",
+    "payment_id": "pay_FAKE6118914230",
+    "order_id": "order_FAKE7739255769",
+    "amount": 30600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-81819"
+    },
+    "failed_at": "2026-08-20T23:22:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0030",
+    "payment_id": "pay_FAKE2125089309",
+    "order_id": "order_FAKE8478529823",
+    "amount": 38100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_method_not_enabled",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-66057"
+    },
+    "failed_at": "2026-08-20T23:51:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0097",
+    "payment_id": "pay_FAKE6562457052",
+    "order_id": "order_FAKE8505373158",
+    "amount": 18800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-36318"
+    },
+    "failed_at": "2026-08-20T23:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0193",
+    "payment_id": "pay_FAKE7305101214",
+    "order_id": "order_FAKE5778781449",
+    "amount": 18200,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-70150"
+    },
+    "failed_at": "2026-08-21T00:19:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0123",
+    "payment_id": "pay_FAKE8577013359",
+    "order_id": "order_FAKE6538133249",
+    "amount": 298100,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-11013"
+    },
+    "failed_at": "2026-08-21T00:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0195",
+    "payment_id": "pay_FAKE7345617046",
+    "order_id": "order_FAKE5019339446",
+    "amount": 51200,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-44181"
+    },
+    "failed_at": "2026-08-21T01:11:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0178",
+    "payment_id": "pay_FAKE7481631841",
+    "order_id": "order_FAKE3147818256",
+    "amount": 59100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-15100"
+    },
+    "failed_at": "2026-08-21T01:41:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0031",
+    "payment_id": "pay_FAKE3343292475",
+    "order_id": "order_FAKE8879525611",
+    "amount": 39700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-82420"
+    },
+    "failed_at": "2026-08-21T02:21:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0135",
+    "payment_id": "pay_FAKE2431779064",
+    "order_id": "order_FAKE6797436140",
+    "amount": 184200,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-96787"
+    },
+    "failed_at": "2026-08-21T02:31:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0086",
+    "payment_id": "pay_FAKE1158998032",
+    "order_id": "order_FAKE7829772942",
+    "amount": 15000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-67711"
+    },
+    "failed_at": "2026-08-21T02:46:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0055",
+    "payment_id": "pay_FAKE2024542722",
+    "order_id": "order_FAKE5070585433",
+    "amount": 145100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-43586"
+    },
+    "failed_at": "2026-08-21T02:48:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0114",
+    "payment_id": "pay_FAKE3036965074",
+    "order_id": "order_FAKE1366637148",
+    "amount": 138300,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-22656"
+    },
+    "failed_at": "2026-08-21T02:50:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0166",
+    "payment_id": "pay_FAKE2306204982",
+    "order_id": "order_FAKE5990610098",
+    "amount": 195100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-39552"
+    },
+    "failed_at": "2026-08-21T02:53:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0158",
+    "payment_id": "pay_FAKE8211516617",
+    "order_id": "order_FAKE9370133343",
+    "amount": 504600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-68188"
+    },
+    "failed_at": "2026-08-21T02:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0082",
+    "payment_id": "pay_FAKE8372755146",
+    "order_id": "order_FAKE6469318275",
+    "amount": 34600,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-71894"
+    },
+    "failed_at": "2026-08-21T03:01:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0033",
+    "payment_id": "pay_FAKE2770791023",
+    "order_id": "order_FAKE9265609985",
+    "amount": 840800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-63964"
+    },
+    "failed_at": "2026-08-21T03:06:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0023",
+    "payment_id": "pay_FAKE3181106786",
+    "order_id": "order_FAKE4656488400",
+    "amount": 13400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-87992"
+    },
+    "failed_at": "2026-08-21T03:29:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0011",
+    "payment_id": "pay_FAKE2948728483",
+    "order_id": "order_FAKE4919706735",
+    "amount": 41900,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_number_invalid",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-49117"
+    },
+    "failed_at": "2026-08-21T03:35:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0098",
+    "payment_id": "pay_FAKE8758809005",
+    "order_id": "order_FAKE5789617427",
+    "amount": 13700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-28449"
+    },
+    "failed_at": "2026-08-21T04:27:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0199",
+    "payment_id": "pay_FAKE7529817193",
+    "order_id": "order_FAKE7799567490",
+    "amount": 68500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-76895"
+    },
+    "failed_at": "2026-08-21T04:27:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0014",
+    "payment_id": "pay_FAKE6633778586",
+    "order_id": "order_FAKE8086172302",
+    "amount": 32300,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "transaction_daily_limit_exceeded",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-77839"
+    },
+    "failed_at": "2026-08-21T04:32:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0051",
+    "payment_id": "pay_FAKE8904911624",
+    "order_id": "order_FAKE4949401194",
+    "amount": 177300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-80008"
+    },
+    "failed_at": "2026-08-21T04:32:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0168",
+    "payment_id": "pay_FAKE3493857758",
+    "order_id": "order_FAKE4709911999",
+    "amount": 14000,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-15958"
+    },
+    "failed_at": "2026-08-21T05:01:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0126",
+    "payment_id": "pay_FAKE7949795085",
+    "order_id": "order_FAKE9245348297",
+    "amount": 14400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-67240"
+    },
+    "failed_at": "2026-08-21T05:27:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0162",
+    "payment_id": "pay_FAKE8703867299",
+    "order_id": "order_FAKE3185089287",
+    "amount": 74700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-36342"
+    },
+    "failed_at": "2026-08-21T05:46:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0091",
+    "payment_id": "pay_FAKE9929101065",
+    "order_id": "order_FAKE9035194895",
+    "amount": 176800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-99539"
+    },
+    "failed_at": "2026-08-21T05:54:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0019",
+    "payment_id": "pay_FAKE6491309593",
+    "order_id": "order_FAKE4965395580",
+    "amount": 32500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-82132"
+    },
+    "failed_at": "2026-08-21T07:03:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0085",
+    "payment_id": "pay_FAKE2644847276",
+    "order_id": "order_FAKE2764265618",
+    "amount": 26100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-71993"
+    },
+    "failed_at": "2026-08-21T07:45:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0037",
+    "payment_id": "pay_FAKE2094024844",
+    "order_id": "order_FAKE8339176912",
+    "amount": 9900,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-78146"
+    },
+    "failed_at": "2026-08-21T07:57:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0152",
+    "payment_id": "pay_FAKE6523804237",
+    "order_id": "order_FAKE8111312076",
+    "amount": 23800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-26315"
+    },
+    "failed_at": "2026-08-21T08:05:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0035",
+    "payment_id": "pay_FAKE7006365648",
+    "order_id": "order_FAKE8616379926",
+    "amount": 27800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "transaction_daily_limit_exceeded",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-94080"
+    },
+    "failed_at": "2026-08-21T08:22:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0066",
+    "payment_id": "pay_FAKE2272368870",
+    "order_id": "order_FAKE2549972386",
+    "amount": 447500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-11854"
+    },
+    "failed_at": "2026-08-21T08:30:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0057",
+    "payment_id": "pay_FAKE9916336966",
+    "order_id": "order_FAKE3693985578",
+    "amount": 15100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-49529"
+    },
+    "failed_at": "2026-08-21T09:04:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0001",
+    "payment_id": "pay_FAKE2801823908",
+    "order_id": "order_FAKE4733616459",
+    "amount": 48700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-30926"
+    },
+    "failed_at": "2026-08-21T09:08:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0141",
+    "payment_id": "pay_FAKE2073755632",
+    "order_id": "order_FAKE8048810275",
+    "amount": 915900,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-58655"
+    },
+    "failed_at": "2026-08-21T09:15:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0184",
+    "payment_id": "pay_FAKE7703957637",
+    "order_id": "order_FAKE6913417379",
+    "amount": 85300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-70249"
+    },
+    "failed_at": "2026-08-21T10:18:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0186",
+    "payment_id": "pay_FAKE7395219544",
+    "order_id": "order_FAKE7355707297",
+    "amount": 164600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-45842"
+    },
+    "failed_at": "2026-08-21T10:18:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0005",
+    "payment_id": "pay_FAKE8173347748",
+    "order_id": "order_FAKE9896606039",
+    "amount": 42400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-32431"
+    },
+    "failed_at": "2026-08-21T10:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0137",
+    "payment_id": "pay_FAKE8585583166",
+    "order_id": "order_FAKE1824656200",
+    "amount": 16900,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-30308"
+    },
+    "failed_at": "2026-08-21T11:14:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0022",
+    "payment_id": "pay_FAKE5160575046",
+    "order_id": "order_FAKE3328710672",
+    "amount": 48100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-51104"
+    },
+    "failed_at": "2026-08-21T11:43:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0050",
+    "payment_id": "pay_FAKE3096929657",
+    "order_id": "order_FAKE6467215542",
+    "amount": 34700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-13804"
+    },
+    "failed_at": "2026-08-21T12:06:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0143",
+    "payment_id": "pay_FAKE8802681056",
+    "order_id": "order_FAKE9094423237",
+    "amount": 55300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-64381"
+    },
+    "failed_at": "2026-08-21T12:18:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0000",
+    "payment_id": "pay_FAKE3342331444",
+    "order_id": "order_FAKE7831113321",
+    "amount": 56400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-13905"
+    },
+    "failed_at": "2026-08-21T12:28:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0054",
+    "payment_id": "pay_FAKE3792347639",
+    "order_id": "order_FAKE3799264931",
+    "amount": 817700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-14067"
+    },
+    "failed_at": "2026-08-21T12:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0073",
+    "payment_id": "pay_FAKE3781569954",
+    "order_id": "order_FAKE9196564761",
+    "amount": 17100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "gateway_technical_error",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-19359"
+    },
+    "failed_at": "2026-08-21T12:41:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0124",
+    "payment_id": "pay_FAKE8757570742",
+    "order_id": "order_FAKE5604529187",
+    "amount": 47800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-15544"
+    },
+    "failed_at": "2026-08-21T13:25:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0107",
+    "payment_id": "pay_FAKE5307145891",
+    "order_id": "order_FAKE1749459431",
+    "amount": 185200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-13379"
+    },
+    "failed_at": "2026-08-21T13:48:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0041",
+    "payment_id": "pay_FAKE8184602688",
+    "order_id": "order_FAKE1855256552",
+    "amount": 11100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-16057"
+    },
+    "failed_at": "2026-08-21T14:04:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0020",
+    "payment_id": "pay_FAKE6009268066",
+    "order_id": "order_FAKE7380780055",
+    "amount": 375000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-62565"
+    },
+    "failed_at": "2026-08-21T14:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0146",
+    "payment_id": "pay_FAKE2293434554",
+    "order_id": "order_FAKE1205082311",
+    "amount": 31300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-93748"
+    },
+    "failed_at": "2026-08-21T14:26:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0140",
+    "payment_id": "pay_FAKE4586784711",
+    "order_id": "order_FAKE9523104008",
+    "amount": 144400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-46932"
+    },
+    "failed_at": "2026-08-21T14:39:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0081",
+    "payment_id": "pay_FAKE4048494026",
+    "order_id": "order_FAKE9648665968",
+    "amount": 30700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-22217"
+    },
+    "failed_at": "2026-08-21T14:40:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0189",
+    "payment_id": "pay_FAKE2041349374",
+    "order_id": "order_FAKE3280805846",
+    "amount": 42500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-40518"
+    },
+    "failed_at": "2026-08-21T14:40:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0071",
+    "payment_id": "pay_FAKE1322401182",
+    "order_id": "order_FAKE5306459450",
+    "amount": 142100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-87832"
+    },
+    "failed_at": "2026-08-21T14:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0024",
+    "payment_id": "pay_FAKE9760623742",
+    "order_id": "order_FAKE5647083348",
+    "amount": 43500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-86503"
+    },
+    "failed_at": "2026-08-21T15:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0008",
+    "payment_id": "pay_FAKE7609857128",
+    "order_id": "order_FAKE7801222128",
+    "amount": 28400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-38746"
+    },
+    "failed_at": "2026-08-21T15:40:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0173",
+    "payment_id": "pay_FAKE4875395503",
+    "order_id": "order_FAKE8788828039",
+    "amount": 168200,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-50988"
+    },
+    "failed_at": "2026-08-21T15:53:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0075",
+    "payment_id": "pay_FAKE1111088881",
+    "order_id": "order_FAKE8822944679",
+    "amount": 167900,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-15273"
+    },
+    "failed_at": "2026-08-21T16:11:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0096",
+    "payment_id": "pay_FAKE4600630513",
+    "order_id": "order_FAKE3698305085",
+    "amount": 178400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "international_transaction_not_allowed",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-94717"
+    },
+    "failed_at": "2026-08-21T16:13:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0010",
+    "payment_id": "pay_FAKE9639245200",
+    "order_id": "order_FAKE4095476665",
+    "amount": 758300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-80381"
+    },
+    "failed_at": "2026-08-21T16:19:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0068",
+    "payment_id": "pay_FAKE3051831252",
+    "order_id": "order_FAKE4530959836",
+    "amount": 30400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-74454"
+    },
+    "failed_at": "2026-08-21T16:28:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0092",
+    "payment_id": "pay_FAKE7268807553",
+    "order_id": "order_FAKE3864059081",
+    "amount": 33700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-47700"
+    },
+    "failed_at": "2026-08-21T16:40:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0188",
+    "payment_id": "pay_FAKE8504761698",
+    "order_id": "order_FAKE1919066362",
+    "amount": 37400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-45537"
+    },
+    "failed_at": "2026-08-21T17:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0036",
+    "payment_id": "pay_FAKE2140169349",
+    "order_id": "order_FAKE7161404428",
+    "amount": 796700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-51114"
+    },
+    "failed_at": "2026-08-21T17:39:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0160",
+    "payment_id": "pay_FAKE8623414405",
+    "order_id": "order_FAKE8318786687",
+    "amount": 375600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-90199"
+    },
+    "failed_at": "2026-08-21T17:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0100",
+    "payment_id": "pay_FAKE7805633786",
+    "order_id": "order_FAKE9333490239",
+    "amount": 15400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-98452"
+    },
+    "failed_at": "2026-08-21T17:47:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0029",
+    "payment_id": "pay_FAKE7465682673",
+    "order_id": "order_FAKE1218179599",
+    "amount": 179800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-65518"
+    },
+    "failed_at": "2026-08-21T18:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0185",
+    "payment_id": "pay_FAKE7915226263",
+    "order_id": "order_FAKE6353758928",
+    "amount": 38400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-49124"
+    },
+    "failed_at": "2026-08-21T18:05:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0028",
+    "payment_id": "pay_FAKE3376077463",
+    "order_id": "order_FAKE6464693977",
+    "amount": 40800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-37607"
+    },
+    "failed_at": "2026-08-21T18:06:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0021",
+    "payment_id": "pay_FAKE8667072205",
+    "order_id": "order_FAKE6520103410",
+    "amount": 45500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-82845"
+    },
+    "failed_at": "2026-08-21T18:12:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0118",
+    "payment_id": "pay_FAKE1124352982",
+    "order_id": "order_FAKE8569491238",
+    "amount": 119400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-56009"
+    },
+    "failed_at": "2026-08-21T18:30:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0007",
+    "payment_id": "pay_FAKE1284277889",
+    "order_id": "order_FAKE8378385615",
+    "amount": 93400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-95909"
+    },
+    "failed_at": "2026-08-21T18:33:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0006",
+    "payment_id": "pay_FAKE3392080953",
+    "order_id": "order_FAKE8235363119",
+    "amount": 49200,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-17331"
+    },
+    "failed_at": "2026-08-21T18:51:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0156",
+    "payment_id": "pay_FAKE1246351029",
+    "order_id": "order_FAKE7039626948",
+    "amount": 154900,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-99051"
+    },
+    "failed_at": "2026-08-21T19:29:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0062",
+    "payment_id": "pay_FAKE3387104291",
+    "order_id": "order_FAKE1820581106",
+    "amount": 22200,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-63271"
+    },
+    "failed_at": "2026-08-21T19:43:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0117",
+    "payment_id": "pay_FAKE3465740756",
+    "order_id": "order_FAKE8761956684",
+    "amount": 38600,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-91490"
+    },
+    "failed_at": "2026-08-21T20:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0072",
+    "payment_id": "pay_FAKE2950049698",
+    "order_id": "order_FAKE3952295757",
+    "amount": 23400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-91927"
+    },
+    "failed_at": "2026-08-21T20:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0074",
+    "payment_id": "pay_FAKE2886149718",
+    "order_id": "order_FAKE7614170462",
+    "amount": 139500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-20543"
+    },
+    "failed_at": "2026-08-21T21:24:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0067",
+    "payment_id": "pay_FAKE3108307952",
+    "order_id": "order_FAKE4748302739",
+    "amount": 39200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-47268"
+    },
+    "failed_at": "2026-08-21T21:53:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0090",
+    "payment_id": "pay_FAKE6834555633",
+    "order_id": "order_FAKE2849785671",
+    "amount": 22400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-79621"
+    },
+    "failed_at": "2026-08-21T22:03:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0112",
+    "payment_id": "pay_FAKE7895255573",
+    "order_id": "order_FAKE4014119648",
+    "amount": 43400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-95316"
+    },
+    "failed_at": "2026-08-21T22:15:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0194",
+    "payment_id": "pay_FAKE4252504650",
+    "order_id": "order_FAKE9147736635",
+    "amount": 31700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-77538"
+    },
+    "failed_at": "2026-08-21T22:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0093",
+    "payment_id": "pay_FAKE6369130994",
+    "order_id": "order_FAKE8925520026",
+    "amount": 20000,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-60422"
+    },
+    "failed_at": "2026-08-21T22:50:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0196",
+    "payment_id": "pay_FAKE3460489491",
+    "order_id": "order_FAKE2014911848",
+    "amount": 186600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-25495"
+    },
+    "failed_at": "2026-08-21T23:13:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0130",
+    "payment_id": "pay_FAKE8715177240",
+    "order_id": "order_FAKE3540128512",
+    "amount": 27900,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-76497"
+    },
+    "failed_at": "2026-08-21T23:20:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0069",
+    "payment_id": "pay_FAKE2065972034",
+    "order_id": "order_FAKE3656086594",
+    "amount": 49600,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-78494"
+    },
+    "failed_at": "2026-08-21T23:29:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0102",
+    "payment_id": "pay_FAKE9572442790",
+    "order_id": "order_FAKE1498733671",
+    "amount": 21900,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-80457"
+    },
+    "failed_at": "2026-08-21T23:33:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0155",
+    "payment_id": "pay_FAKE8377306021",
+    "order_id": "order_FAKE7201539282",
+    "amount": 32700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-15551"
+    },
+    "failed_at": "2026-08-21T23:50:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0013",
+    "payment_id": "pay_FAKE2028439863",
+    "order_id": "order_FAKE1338258951",
+    "amount": 199700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-73699"
+    },
+    "failed_at": "2026-08-21T23:59:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0181",
+    "payment_id": "pay_FAKE9704383251",
+    "order_id": "order_FAKE7333316743",
+    "amount": 992100,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-95929"
+    },
+    "failed_at": "2026-08-22T00:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0136",
+    "payment_id": "pay_FAKE7695519305",
+    "order_id": "order_FAKE9991312028",
+    "amount": 187200,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-65496"
+    },
+    "failed_at": "2026-08-22T00:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0197",
+    "payment_id": "pay_FAKE3964774623",
+    "order_id": "order_FAKE9334966533",
+    "amount": 28700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-90560"
+    },
+    "failed_at": "2026-08-22T00:27:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0125",
+    "payment_id": "pay_FAKE7767834064",
+    "order_id": "order_FAKE7757700186",
+    "amount": 781100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-93904"
+    },
+    "failed_at": "2026-08-22T00:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0183",
+    "payment_id": "pay_FAKE2798647685",
+    "order_id": "order_FAKE6170675398",
+    "amount": 35500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-90147"
+    },
+    "failed_at": "2026-08-22T00:49:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0025",
+    "payment_id": "pay_FAKE6320115677",
+    "order_id": "order_FAKE2699887270",
+    "amount": 750100,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-94607"
+    },
+    "failed_at": "2026-08-22T00:53:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0159",
+    "payment_id": "pay_FAKE8084809436",
+    "order_id": "order_FAKE1487258103",
+    "amount": 47500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-34385"
+    },
+    "failed_at": "2026-08-22T00:55:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0171",
+    "payment_id": "pay_FAKE8991977937",
+    "order_id": "order_FAKE9484167278",
+    "amount": 16500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-58567"
+    },
+    "failed_at": "2026-08-22T01:35:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0077",
+    "payment_id": "pay_FAKE3878201524",
+    "order_id": "order_FAKE4683935600",
+    "amount": 26700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-63955"
+    },
+    "failed_at": "2026-08-22T01:50:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0191",
+    "payment_id": "pay_FAKE4301648719",
+    "order_id": "order_FAKE4957687327",
+    "amount": 135400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "credit_limit_exceeded",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-33040"
+    },
+    "failed_at": "2026-08-22T01:51:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0111",
+    "payment_id": "pay_FAKE3612617557",
+    "order_id": "order_FAKE1282103057",
+    "amount": 23900,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-91830"
+    },
+    "failed_at": "2026-08-22T01:58:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0040",
+    "payment_id": "pay_FAKE7292076361",
+    "order_id": "order_FAKE5659161352",
+    "amount": 36200,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_method_not_enabled",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-97012"
+    },
+    "failed_at": "2026-08-22T01:59:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0108",
+    "payment_id": "pay_FAKE1067779246",
+    "order_id": "order_FAKE2139744790",
+    "amount": 75800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-65176"
+    },
+    "failed_at": "2026-08-22T02:12:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0053",
+    "payment_id": "pay_FAKE9072992279",
+    "order_id": "order_FAKE7105574449",
+    "amount": 14000,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-71644"
+    },
+    "failed_at": "2026-08-22T02:37:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0101",
+    "payment_id": "pay_FAKE9861449701",
+    "order_id": "order_FAKE8833399096",
+    "amount": 193400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-49608"
+    },
+    "failed_at": "2026-08-22T02:47:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0088",
+    "payment_id": "pay_FAKE8556573246",
+    "order_id": "order_FAKE9744120054",
+    "amount": 63900,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-40771"
+    },
+    "failed_at": "2026-08-22T02:51:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0038",
+    "payment_id": "pay_FAKE7971399399",
+    "order_id": "order_FAKE9160639027",
+    "amount": 35800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-50538"
+    },
+    "failed_at": "2026-08-22T03:04:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0134",
+    "payment_id": "pay_FAKE5578056564",
+    "order_id": "order_FAKE9995834531",
+    "amount": 188800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-60667"
+    },
+    "failed_at": "2026-08-22T03:41:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0002",
+    "payment_id": "pay_FAKE1438989805",
+    "order_id": "order_FAKE2631775357",
+    "amount": 28200,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_collect_request_expired",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-55082"
+    },
+    "failed_at": "2026-08-22T03:57:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0150",
+    "payment_id": "pay_FAKE8281641403",
+    "order_id": "order_FAKE3713284816",
+    "amount": 16800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "upi_app_technical_error",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-18270"
+    },
+    "failed_at": "2026-08-22T04:13:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0064",
+    "payment_id": "pay_FAKE6715705115",
+    "order_id": "order_FAKE8313706299",
+    "amount": 23700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-50189"
+    },
+    "failed_at": "2026-08-22T04:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0149",
+    "payment_id": "pay_FAKE4386667704",
+    "order_id": "order_FAKE2480915452",
+    "amount": 47400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "invalid_vpa",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-96127"
+    },
+    "failed_at": "2026-08-22T06:45:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0105",
+    "payment_id": "pay_FAKE5555027957",
+    "order_id": "order_FAKE2184901787",
+    "amount": 993000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-26011"
+    },
+    "failed_at": "2026-08-22T06:58:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0094",
+    "payment_id": "pay_FAKE7763765757",
+    "order_id": "order_FAKE2268006448",
+    "amount": 43600,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-61879"
+    },
+    "failed_at": "2026-08-22T07:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0163",
+    "payment_id": "pay_FAKE6879428703",
+    "order_id": "order_FAKE3369305560",
+    "amount": 175200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_risk_check_failed",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-21300"
+    },
+    "failed_at": "2026-08-22T07:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0109",
+    "payment_id": "pay_FAKE5763350700",
+    "order_id": "order_FAKE3163970710",
+    "amount": 41300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "bank_technical_error",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-15683"
+    },
+    "failed_at": "2026-08-22T07:25:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0176",
+    "payment_id": "pay_FAKE8575707116",
+    "order_id": "order_FAKE2571688961",
+    "amount": 30400,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-16705"
+    },
+    "failed_at": "2026-08-22T07:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0131",
+    "payment_id": "pay_FAKE8867077130",
+    "order_id": "order_FAKE9919491730",
+    "amount": 14500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Aarav",
+      "email": "aarav.demo@example.com",
+      "contact": "+91-99999-90610"
+    },
+    "failed_at": "2026-08-22T08:20:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0027",
+    "payment_id": "pay_FAKE2224011538",
+    "order_id": "order_FAKE3271782991",
+    "amount": 186600,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-82692"
+    },
+    "failed_at": "2026-08-22T08:27:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0198",
+    "payment_id": "pay_FAKE9941564880",
+    "order_id": "order_FAKE8317619798",
+    "amount": 13800,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-83946"
+    },
+    "failed_at": "2026-08-22T09:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0012",
+    "payment_id": "pay_FAKE4274958945",
+    "order_id": "order_FAKE9592390865",
+    "amount": 116200,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-74042"
+    },
+    "failed_at": "2026-08-22T09:03:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0144",
+    "payment_id": "pay_FAKE1964386641",
+    "order_id": "order_FAKE1627276995",
+    "amount": 11800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-47601"
+    },
+    "failed_at": "2026-08-22T09:11:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0061",
+    "payment_id": "pay_FAKE2444812497",
+    "order_id": "order_FAKE2395925222",
+    "amount": 149700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-37802"
+    },
+    "failed_at": "2026-08-22T09:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0049",
+    "payment_id": "pay_FAKE3048612358",
+    "order_id": "order_FAKE9344011888",
+    "amount": 111000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-61116"
+    },
+    "failed_at": "2026-08-22T09:56:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0187",
+    "payment_id": "pay_FAKE8809871735",
+    "order_id": "order_FAKE4455798713",
+    "amount": 109300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-15513"
+    },
+    "failed_at": "2026-08-22T11:52:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0099",
+    "payment_id": "pay_FAKE2570991899",
+    "order_id": "order_FAKE8690920484",
+    "amount": 52700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_number_invalid",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-44663"
+    },
+    "failed_at": "2026-08-22T12:15:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0017",
+    "payment_id": "pay_FAKE1817804383",
+    "order_id": "order_FAKE7146318035",
+    "amount": 31500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-63883"
+    },
+    "failed_at": "2026-08-22T13:34:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0087",
+    "payment_id": "pay_FAKE5165932723",
+    "order_id": "order_FAKE5616352188",
+    "amount": 23400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-54375"
+    },
+    "failed_at": "2026-08-22T13:58:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0169",
+    "payment_id": "pay_FAKE5425044246",
+    "order_id": "order_FAKE7638204740",
+    "amount": 181300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Karan",
+      "email": "karan.demo@example.com",
+      "contact": "+91-99999-49596"
+    },
+    "failed_at": "2026-08-22T14:52:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0103",
+    "payment_id": "pay_FAKE4120719599",
+    "order_id": "order_FAKE9097790557",
+    "amount": 43400,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-22978"
+    },
+    "failed_at": "2026-08-22T15:13:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0121",
+    "payment_id": "pay_FAKE7193532615",
+    "order_id": "order_FAKE2173242669",
+    "amount": 48500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-77154"
+    },
+    "failed_at": "2026-08-22T15:53:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0154",
+    "payment_id": "pay_FAKE5633956194",
+    "order_id": "order_FAKE4531928910",
+    "amount": 37800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-48504"
+    },
+    "failed_at": "2026-08-22T15:57:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0070",
+    "payment_id": "pay_FAKE3667292043",
+    "order_id": "order_FAKE4178659381",
+    "amount": 48900,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "insufficient_funds",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-37235"
+    },
+    "failed_at": "2026-08-22T16:32:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0113",
+    "payment_id": "pay_FAKE6276339732",
+    "order_id": "order_FAKE7242730249",
+    "amount": 135000,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-22463"
+    },
+    "failed_at": "2026-08-22T16:43:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0060",
+    "payment_id": "pay_FAKE7839626408",
+    "order_id": "order_FAKE5014170428",
+    "amount": 107000,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-69087"
+    },
+    "failed_at": "2026-08-22T17:28:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0139",
+    "payment_id": "pay_FAKE5482624860",
+    "order_id": "order_FAKE4090596936",
+    "amount": 140800,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_method_not_enabled",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-90031"
+    },
+    "failed_at": "2026-08-22T17:45:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0157",
+    "payment_id": "pay_FAKE1149460439",
+    "order_id": "order_FAKE1288765093",
+    "amount": 49700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-94562"
+    },
+    "failed_at": "2026-08-22T17:49:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0153",
+    "payment_id": "pay_FAKE6955593943",
+    "order_id": "order_FAKE5182110973",
+    "amount": 606300,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_risk_check_failed",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-75211"
+    },
+    "failed_at": "2026-08-22T18:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0076",
+    "payment_id": "pay_FAKE9229469952",
+    "order_id": "order_FAKE7808938880",
+    "amount": 42400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-74451"
+    },
+    "failed_at": "2026-08-22T18:22:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0179",
+    "payment_id": "pay_FAKE5895322075",
+    "order_id": "order_FAKE2368076065",
+    "amount": 130300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-90805"
+    },
+    "failed_at": "2026-08-22T20:23:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0059",
+    "payment_id": "pay_FAKE4037867512",
+    "order_id": "order_FAKE2870403050",
+    "amount": 156700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-95256"
+    },
+    "failed_at": "2026-08-22T20:46:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0048",
+    "payment_id": "pay_FAKE2785736751",
+    "order_id": "order_FAKE7099469983",
+    "amount": 49300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_expired",
+    "customer": {
+      "name": "Ishita",
+      "email": "ishita.demo@example.com",
+      "contact": "+91-99999-86556"
+    },
+    "failed_at": "2026-08-22T21:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0165",
+    "payment_id": "pay_FAKE2479679716",
+    "order_id": "order_FAKE5150074940",
+    "amount": 138500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-75911"
+    },
+    "failed_at": "2026-08-22T21:36:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0174",
+    "payment_id": "pay_FAKE6620138568",
+    "order_id": "order_FAKE1099541460",
+    "amount": 30000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-76249"
+    },
+    "failed_at": "2026-08-22T21:44:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0145",
+    "payment_id": "pay_FAKE1340272119",
+    "order_id": "order_FAKE2099184899",
+    "amount": 80500,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Vihaan",
+      "email": "vihaan.demo@example.com",
+      "contact": "+91-99999-81932"
+    },
+    "failed_at": "2026-08-22T22:02:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0164",
+    "payment_id": "pay_FAKE7552812957",
+    "order_id": "order_FAKE8598503901",
+    "amount": 874300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Priya",
+      "email": "priya.demo@example.com",
+      "contact": "+91-99999-85353"
+    },
+    "failed_at": "2026-08-22T23:21:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0182",
+    "payment_id": "pay_FAKE8907752604",
+    "order_id": "order_FAKE3923699745",
+    "amount": 56300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_cvv",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-85047"
+    },
+    "failed_at": "2026-08-22T23:35:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0046",
+    "payment_id": "pay_FAKE3691864041",
+    "order_id": "order_FAKE6474354351",
+    "amount": 65700,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-47450"
+    },
+    "failed_at": "2026-08-23T00:09:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0122",
+    "payment_id": "pay_FAKE2324651201",
+    "order_id": "order_FAKE6242086783",
+    "amount": 40500,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "authentication_failed",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-17180"
+    },
+    "failed_at": "2026-08-23T00:26:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0084",
+    "payment_id": "pay_FAKE4716265973",
+    "order_id": "order_FAKE7375197714",
+    "amount": 26900,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_timed_out",
+    "customer": {
+      "name": "Kabir",
+      "email": "kabir.demo@example.com",
+      "contact": "+91-99999-82340"
+    },
+    "failed_at": "2026-08-23T00:51:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0063",
+    "payment_id": "pay_FAKE1074059253",
+    "order_id": "order_FAKE2263732197",
+    "amount": 132700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "bank_not_available",
+    "customer": {
+      "name": "Aditya",
+      "email": "aditya.demo@example.com",
+      "contact": "+91-99999-41890"
+    },
+    "failed_at": "2026-08-23T01:00:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0192",
+    "payment_id": "pay_FAKE1160916026",
+    "order_id": "order_FAKE3588933132",
+    "amount": 960400,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_declined",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-53914"
+    },
+    "failed_at": "2026-08-23T01:38:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0147",
+    "payment_id": "pay_FAKE9660523876",
+    "order_id": "order_FAKE5911625145",
+    "amount": 31800,
+    "currency": "INR",
+    "method": "upi",
+    "failure_reason": "payment_risk_check_failed",
+    "customer": {
+      "name": "Nisha",
+      "email": "nisha.demo@example.com",
+      "contact": "+91-99999-10205"
+    },
+    "failed_at": "2026-08-23T02:14:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0045",
+    "payment_id": "pay_FAKE8995059760",
+    "order_id": "order_FAKE7228002201",
+    "amount": 815700,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Meera",
+      "email": "meera.demo@example.com",
+      "contact": "+91-99999-42406"
+    },
+    "failed_at": "2026-08-23T02:55:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0116",
+    "payment_id": "pay_FAKE1913706213",
+    "order_id": "order_FAKE8115628227",
+    "amount": 21300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "debit_declined",
+    "customer": {
+      "name": "Sneha",
+      "email": "sneha.demo@example.com",
+      "contact": "+91-99999-24184"
+    },
+    "failed_at": "2026-08-23T03:16:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0083",
+    "payment_id": "pay_FAKE5594799319",
+    "order_id": "order_FAKE8964640525",
+    "amount": 27300,
+    "currency": "INR",
+    "method": "netbanking",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Ananya",
+      "email": "ananya.demo@example.com",
+      "contact": "+91-99999-76550"
+    },
+    "failed_at": "2026-08-23T03:23:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0180",
+    "payment_id": "pay_FAKE7581349462",
+    "order_id": "order_FAKE6582557981",
+    "amount": 53300,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "card_number_invalid",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-58281"
+    },
+    "failed_at": "2026-08-23T03:35:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0016",
+    "payment_id": "pay_FAKE6317189421",
+    "order_id": "order_FAKE8168204967",
+    "amount": 93700,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_cancelled",
+    "customer": {
+      "name": "Diya",
+      "email": "diya.demo@example.com",
+      "contact": "+91-99999-80678"
+    },
+    "failed_at": "2026-08-23T04:11:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0127",
+    "payment_id": "pay_FAKE5632753983",
+    "order_id": "order_FAKE9033841191",
+    "amount": 48000,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "payment_failed",
+    "customer": {
+      "name": "Rohan",
+      "email": "rohan.demo@example.com",
+      "contact": "+91-99999-54500"
+    },
+    "failed_at": "2026-08-23T05:32:00+05:30",
+    "synthetic": true
+  },
+  {
+    "event_id": "evt_synthetic_0138",
+    "payment_id": "pay_FAKE9752058817",
+    "order_id": "order_FAKE2617999521",
+    "amount": 18200,
+    "currency": "INR",
+    "method": "card",
+    "failure_reason": "incorrect_otp",
+    "customer": {
+      "name": "Arjun",
+      "email": "arjun.demo@example.com",
+      "contact": "+91-99999-33703"
+    },
+    "failed_at": "2026-08-23T05:53:00+05:30",
+    "synthetic": true
+  }
+]
