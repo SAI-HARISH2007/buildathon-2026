@@ -16,8 +16,14 @@ engine.py — the model proposes, the rules dispose.
 
 import json
 import os
+import threading
+import time
 
 import httpx
+
+# Free-tier Gemini allows ~10 requests/min; parallel batch ingest must not
+# burst past it. Two lanes + the 429 retry keeps nearly every call real.
+_gate = threading.Semaphore(2)
 
 GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
@@ -71,11 +77,17 @@ def decide(ctx: dict) -> dict:
                            reason=ctx["reason"], failed_at=ctx["failed_at"],
                            attempts=ctx["attempts"], actions=ACTIONS)
     try:
-        resp = httpx.post(
-            GEMINI_URL, params={"key": api_key}, timeout=30,
-            json={"contents": [{"parts": [{"text": prompt}]}],
-                  "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}},
-        )
+        with _gate:
+            for attempt in (1, 2):  # one retry, only for free-tier rate limiting
+                resp = httpx.post(
+                    GEMINI_URL, params={"key": api_key}, timeout=30,
+                    json={"contents": [{"parts": [{"text": prompt}]}],
+                          "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}},
+                )
+                if resp.status_code == 429 and attempt == 1:
+                    time.sleep(min(float(resp.headers.get("retry-after", 10)), 20))
+                    continue
+                break
         resp.raise_for_status()
         text = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
         out = json.loads(text)

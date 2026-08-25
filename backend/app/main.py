@@ -29,13 +29,65 @@ class AdvanceBody(BaseModel):
 
 @app.post("/api/ingest")
 def ingest(body: IngestBody):
+    # network-bound prep (LLM + payment links) fans out in parallel;
+    # SQLite writes stay sequential on one connection. Test-mode keys only
+    # allow a ~5-link burst, so a batch spends a small real-link budget and
+    # the rest are labeled budget-mocks (see razorpay_client).
+    from concurrent.futures import ThreadPoolExecutor
+    budget = 4
+    allows = []
+    for event in body.events:
+        _, policy = engine.policy_for(event["failure_reason"])
+        real = policy.send_payment_link and budget > 0
+        if real:
+            budget -= 1
+        allows.append(real)
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        preps = list(pool.map(engine.prepare_event, body.events, allows))
     c = conn()
     try:
-        for event in body.events:
-            engine.ingest_event(c, event)
+        for event, prep in zip(body.events, preps):
+            engine.ingest_event(c, event, prep)
         c.commit()
         executed = engine.run_due(c)
         return {"ingested": len(body.events), "immediately_executed": executed}
+    finally:
+        c.close()
+
+
+@app.post("/api/webhook/razorpay")
+def razorpay_webhook(envelope: dict):
+    """Accepts Razorpay's real `payment.failed` webhook shape, so Reclaim can
+    plug into a live merchant account with zero adapters."""
+    if envelope.get("event") != "payment.failed":
+        return {"ignored": envelope.get("event")}
+    try:
+        p = envelope["payload"]["payment"]["entity"]
+    except KeyError:
+        raise HTTPException(400, "malformed payload: expected payload.payment.entity")
+    from datetime import datetime, timezone
+    notes = p.get("notes") or {}
+    email = p.get("email") or "unknown@example.com"
+    event = {
+        "payment_id": p["id"],
+        "order_id": p.get("order_id"),
+        "amount": p["amount"],
+        "currency": p.get("currency", "INR"),
+        "method": p.get("method", "card"),
+        "failure_reason": p.get("error_reason") or "payment_failed",
+        "customer": {
+            "name": notes.get("name") or email.split("@")[0].title(),
+            "email": email,
+            "contact": p.get("contact", ""),
+        },
+        "failed_at": datetime.fromtimestamp(p["created_at"], tz=timezone.utc).isoformat()[:19],
+    }
+    c = conn()
+    try:
+        engine.ingest_event(c, event)
+        c.commit()
+        engine.run_due(c)
+        return {"ingested": p["id"], "classified_as": engine.policy_for(event["failure_reason"])[0].value}
     finally:
         c.close()
 

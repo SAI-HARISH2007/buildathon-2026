@@ -8,6 +8,7 @@ link creation) is the real production path.
 """
 
 import random
+import uuid
 from datetime import datetime, timedelta
 
 from . import llm, razorpay_client
@@ -37,11 +38,37 @@ def _rng(payment_id: str) -> random.Random:
     return random.Random(payment_id)  # deterministic per payment -> reproducible demos
 
 
-def ingest_event(conn, event: dict) -> None:
+def prepare_event(event: dict, allow_real_link: bool = True) -> dict:
+    """The network-bound half of ingestion — LLM decision and payment-link
+    creation — with no database access, so batches can run these in parallel
+    and hand the results to ingest_event for sequential, single-writer commits."""
+    cat, policy = policy_for(event["failure_reason"])
+    prep: dict = {"decision": None, "link": None}
+    if cat in (Category.DO_NOT_RETRY, Category.MERCHANT_CONFIG):
+        return prep
+    if policy.needs_llm:
+        prep["decision"] = llm.decide({"amount": event["amount"], "method": event["method"],
+                                       "reason": event["failure_reason"], "failed_at": event["failed_at"],
+                                       "attempts": 0, "name": event["customer"]["name"]})
+        if prep["decision"]["action"] == "give_up":
+            return prep
+    if policy.send_payment_link:
+        # reference_id must be globally unique in the Razorpay account — reusing
+        # a payment_id across demo resets gets the link rejected (see BUGLOG)
+        prep["link"] = razorpay_client.create_payment_link(
+            event["amount"], event.get("currency", "INR"),
+            f"Payment retry for order {event.get('order_id')}", event["customer"],
+            f"{event['payment_id']}_{uuid.uuid4().hex[:6]}", allow_real=allow_real_link)
+    return prep
+
+
+def ingest_event(conn, event: dict, prep: dict | None = None) -> None:
     now = get_now(conn)
     pid = event["payment_id"]
     reason = event["failure_reason"]
     cat, policy = policy_for(reason)
+    if prep is None:
+        prep = prepare_event(event)
 
     conn.execute(
         """INSERT OR IGNORE INTO payments
@@ -68,9 +95,7 @@ def ingest_event(conn, event: dict) -> None:
         return
 
     if policy.needs_llm:
-        decision = llm.decide({"amount": event["amount"], "method": event["method"],
-                               "reason": reason, "failed_at": event["failed_at"],
-                               "attempts": 0, "name": event["customer"]["name"]})
+        decision = prep["decision"]
         wait = min(decision["wait_minutes"], policy.cooldown_minutes[0]) \
             if decision["action"] == "retry_soon" else decision["wait_minutes"]
         wait = max(1, min(wait, 7 * 24 * 60))  # clamp: 1 min .. 7 days, code-enforced
@@ -86,10 +111,8 @@ def ingest_event(conn, event: dict) -> None:
         due = now + timedelta(minutes=policy.cooldown_minutes[0])
         message = ""
 
-    if policy.send_payment_link:
-        link = razorpay_client.create_payment_link(
-            event["amount"], event.get("currency", "INR"),
-            f"Payment retry for order {event.get('order_id')}", event["customer"], pid)
+    if policy.send_payment_link and prep["link"]:
+        link = prep["link"]
         log_action(conn, pid, fmt(now), "link_created", "system",
                    f"recovery link issued ({link['mode']} mode)", link)
         if message:

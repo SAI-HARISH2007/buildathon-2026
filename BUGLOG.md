@@ -13,6 +13,16 @@ Format per entry:
 
 ---
 
+## 2026-08-24 — Razorpay rejects reused reference_ids across demo resets
+**What broke:** After a dashboard reset + fresh ingest, almost every "real" payment link silently degraded to a mock fallback. First run was fine.
+**Why:** Payment links were created with `reference_id = payment_id`. Resetting the local DB doesn't reset Razorpay's — the same synthetic payment ids arrived again and Razorpay (correctly) rejected the duplicates. Confirmed with a two-call test: first 200, second 4xx.
+**How I got out:** `reference_id` is now `payment_id` plus a random suffix per attempt. Local resets and remote state no longer collide.
+
+## 2026-08-24 — parallelizing ingest ran head-first into both rate limits
+**What broke:** Made batch ingest ~3× faster with an 8-worker prep pool — and link fallbacks went UP (35 of 40 mocked). Measured Razorpay test mode directly: ~5 link creations per burst, then 429s refilling at roughly one slot per 5–10 seconds. Gemini's free tier (~10 req/min) also started dropping parallel calls to the heuristic.
+**Why:** Parallelism doesn't create throughput the provider won't give you. A 60-event batch wanting ~40 links can never be all-real on a test key, no matter the concurrency.
+**How I got out:** Stopped fighting the limit and designed around it: each batch spends a small **real-link budget** (first few link-needing payments, within the burst allowance, with patient 429 retries) and the rest are explicitly labeled `mock-rate-budget` in the audit trail; Gemini calls go through a 2-lane semaphore plus a retry-after-429. Single webhook events always get real links — which is the actual production shape, since real failures arrive one at a time, not 60 at once.
+
 ## 2026-08-23 — Vite silently serves stale code on WSL2 /mnt/c
 **What broke:** Fixed a table-clipping bug in the dashboard, re-screenshotted — pixel-identical to before the fix. The edit was on disk; the browser got old code.
 **Why:** The project lives on a Windows-mounted path (`/mnt/c`) under WSL2, where inotify file-watching doesn't work — Vite never saw the change and kept serving its cached transform.
