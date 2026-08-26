@@ -1,0 +1,110 @@
+[
+  {
+    "case": "small UPI failure at night",
+    "action": "retry_soon",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "large card decline, evening",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "second failure of the same payment",
+    "action": "give_up",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "third failure of the same payment",
+    "action": "give_up",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "mid-size netbanking decline, business hours",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "tiny UPI failure, business hours",
+    "action": "retry_soon",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "large netbanking capture failure",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "small card verification failure",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "large UPI decline at 3 AM",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "repeat large decline",
+    "action": "give_up",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "mid-size payment_failed, no info at all",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  },
+  {
+    "case": "small netbanking failure, early morning",
+    "action": "retry_tomorrow",
+    "engine": "heuristic",
+    "action_ok": true,
+    "bounds_ok": true,
+    "reasoning_ok": true,
+    "message_ok": true
+  }
+]

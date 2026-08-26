@@ -167,6 +167,43 @@ def payment_detail(payment_id: str):
         c.close()
 
 
+class ReviewBody(BaseModel):
+    action: str  # approve_retry | dismiss
+
+
+@app.post("/api/payments/{payment_id}/review")
+def review(payment_id: str, body: ReviewBody):
+    """Human-in-the-loop resolution for payments the agent refuses to touch.
+    approve_retry grants exactly ONE supervised attempt; dismiss closes it."""
+    if body.action not in ("approve_retry", "dismiss"):
+        raise HTTPException(400, "action must be approve_retry or dismiss")
+    c = conn()
+    try:
+        p = c.execute("SELECT * FROM payments WHERE payment_id=?", (payment_id,)).fetchone()
+        if p is None:
+            raise HTTPException(404, "unknown payment")
+        if p["status"] not in ("manual_review", "merchant_alert"):
+            raise HTTPException(409, f"payment is '{p['status']}', not awaiting review")
+        from datetime import timedelta
+        from . import db as _db
+        now = simclock.get_now(c)
+        if body.action == "dismiss":
+            c.execute("UPDATE payments SET status='dismissed' WHERE payment_id=?", (payment_id,))
+            _db.log_action(c, payment_id, simclock.fmt(now), "dismissed", "human",
+                           "operator closed the case — no recovery attempted")
+        else:
+            due = now + timedelta(minutes=5)
+            c.execute("INSERT INTO schedule (payment_id, due_at, attempt_no) VALUES (?,?,1)",
+                      (payment_id, simclock.fmt(due)))
+            c.execute("UPDATE payments SET status='scheduled' WHERE payment_id=?", (payment_id,))
+            _db.log_action(c, payment_id, simclock.fmt(now), "scheduled", "human",
+                           f"operator approved ONE supervised retry, due {simclock.fmt(due)}")
+        c.commit()
+        return {"payment_id": payment_id, "action": body.action}
+    finally:
+        c.close()
+
+
 @app.get("/api/stats")
 def stats():
     c = conn()
@@ -174,3 +211,11 @@ def stats():
         return engine.stats(c)
     finally:
         c.close()
+
+
+# Single-service deploys: serve the built dashboard when it exists.
+# API routes above always win; this only catches non-/api paths.
+_DIST = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+if _DIST.exists():
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/", StaticFiles(directory=_DIST, html=True), name="dashboard")

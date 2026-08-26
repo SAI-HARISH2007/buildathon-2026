@@ -98,6 +98,9 @@ tr.sel td { background: rgba(57, 135, 229, 0.10); }
 .drawer { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow-y: auto; }
 .drawer h2 { font-size: 14px; margin: 0; font-family: ui-monospace, Consolas, monospace; }
 .drawer-sub { color: var(--ink-2); font-size: 13px; margin: 6px 0 14px; }
+.review-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 14px; padding: 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--page); }
+.review-hint { flex-basis: 100%; color: var(--muted); font-size: 12px; }
+
 .timeline { list-style: none; margin: 0; padding: 0; }
 .tl { border-left: 2px solid var(--grid); padding: 0 0 14px 12px; position: relative; }
 .tl::before { content: ""; position: absolute; left: -5px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); border: 2px solid var(--surface); }

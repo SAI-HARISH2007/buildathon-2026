@@ -13,6 +13,11 @@ Format per entry:
 
 ---
 
+## 2026-08-26 — the eval harness caught Gemini harassing customers
+**What broke:** Nothing crashed — worse, something worked wrong quietly. The first eval run scored live Gemini 10/12: on both repeat-failure cases (attempts 1 and 2) it chose to send the customer *another* payment link and message, where the right behavior is backing off. The keyless heuristic scored 12/12 on the same rubric.
+**Why:** The prompt's "repeated failures deserve give_up" was a soft rule of thumb, and a recovery-eager model read it as optional. Code bounds capped the damage (max 2 attempts regardless), but the *decision quality* was wrong and only measurement exposed it.
+**How I got out:** Promoted it to a HARD RULE in the prompt (attempts >= 2 MUST give_up; attempts == 1 prefers backing off) and re-ran: 12/12. Kept the finding in the eval docstring — the harness now exists precisely to catch this class of silent regression.
+
 ## 2026-08-24 — Razorpay rejects reused reference_ids across demo resets
 **What broke:** After a dashboard reset + fresh ingest, almost every "real" payment link silently degraded to a mock fallback. First run was fine.
 **Why:** Payment links were created with `reference_id = payment_id`. Resetting the local DB doesn't reset Razorpay's — the same synthetic payment ids arrived again and Razorpay (correctly) rejected the duplicates. Confirmed with a two-call test: first 200, second 4xx.

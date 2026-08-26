@@ -14,6 +14,36 @@ The core design principle: **AI only where judgment is needed, rules everywhere 
 4. **Execute — bounded.** Recovery actions go through Razorpay test-mode APIs (Payment Links). Hard stops enforced in code, not prompts: max attempts per payment, cool-down windows, no retries on risk/compliance failures, ever.
 5. **Audit + dashboard.** Every decision is logged: what failed, why, what the agent chose, what happened. Dashboard shows the batch in → recovered count, ₹ recovered, and the exceptions queue for humans.
 
+## Architecture
+
+```mermaid
+flowchart LR
+    W[Razorpay webhook\npayment.failed] --> I
+    B[Batch ingest\nsynthetic events] --> I
+    I[Ingest] --> C{Rule classifier\n114 documented reasons\n-> 8 categories}
+    C -->|clear-cut| P[Fixed retry policy\nbounds in code]
+    C -->|ambiguous| L[LLM triage\nGemini, eval-guarded]
+    C -->|risk / compliance| H[Human review queue\napprove one retry / dismiss]
+    C -->|merchant config| H
+    L --> P
+    P --> S[Scheduler\nsim clock]
+    S --> X[Executor\nRazorpay Payment Links\nbounded retries]
+    X --> A[(Audit trail\nevery decision, source-tagged)]
+    A --> D[Dashboard\nrecovered INR, queues, timelines]
+```
+
+Every arrow into the executor passes through code-enforced bounds (max attempts,
+cool-downs, hard no-retry classes) — the LLM proposes, the rules dispose.
+
+## Evals
+
+The one LLM call site is eval-guarded: `python scripts/eval_llm.py` runs 12
+hand-labeled ambiguous cases against a four-check rubric (acceptable action,
+bounds, message quality, stated reasoning), and `--heuristic` runs the keyless
+baseline for comparison. The first run caught live Gemini re-messaging
+customers after repeated failures (10/12); a prompt fix returned it to 12/12.
+Results land in `data/eval_results_*.json`.
+
 ## Stack
 
 - **Backend:** FastAPI + SQLite (zero-setup, judge can run it with one command)

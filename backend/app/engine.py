@@ -161,7 +161,7 @@ def run_due(conn) -> int:
 
         recovered = simulate_retry_outcome(p, attempt)
         log_action(conn, p["payment_id"], fmt(now), "retry_attempted", "system",
-                   f"attempt {attempt}/{policy.max_attempts} (outcome simulated)",
+                   f"attempt {attempt}/{max(policy.max_attempts, attempt)} (outcome simulated)",
                    {"recovered": recovered})
         if recovered:
             conn.execute("UPDATE payments SET status='recovered', recovered_at=? WHERE payment_id=?",

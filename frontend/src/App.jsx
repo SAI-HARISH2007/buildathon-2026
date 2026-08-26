@@ -10,6 +10,7 @@ const STATUS_META = {
   manual_review:  { label: 'Manual review',  tone: 'serious',  icon: '⚑' },
   merchant_alert: { label: 'Merchant alert', tone: 'serious',  icon: '⚠' },
   abandoned:      { label: 'Abandoned',      tone: 'critical', icon: '⊘' },
+  dismissed:      { label: 'Dismissed',      tone: 'critical', icon: '—' },
 }
 
 const CATEGORY_LABELS = {
@@ -95,8 +96,9 @@ function CategoryBars({ stats }) {
   )
 }
 
-function Timeline({ payment }) {
+function Timeline({ payment, onReview, busy }) {
   if (!payment) return null
+  const needsReview = payment.status === 'manual_review' || payment.status === 'merchant_alert'
   return (
     <aside className="drawer">
       <h2>{payment.payment_id}</h2>
@@ -104,6 +106,13 @@ function Timeline({ payment }) {
         {payment.customer_name} · {payment.method.toUpperCase()} · {rupees(payment.amount)} ·{' '}
         <StatusBadge status={payment.status} />
       </p>
+      {needsReview && (
+        <div className="review-actions">
+          <span className="review-hint">The agent won't act on this without a human.</span>
+          <button disabled={busy} onClick={() => onReview('approve_retry')}>✓ Approve one retry</button>
+          <button disabled={busy} onClick={() => onReview('dismiss')}>— Dismiss</button>
+        </div>
+      )}
       <ol className="timeline">
         {payment.timeline.map((a, i) => {
           const detail = a.detail ? JSON.parse(a.detail) : {}
@@ -216,7 +225,9 @@ export default function App() {
                 </div>
               </section>
             </div>
-            <Timeline payment={selected} />
+            <Timeline payment={selected} busy={busy}
+                      onReview={(action) => act(() => post(`/payments/${selected.payment_id}/review`, { action }),
+                                                action === 'dismiss' ? 'Dismissed' : 'Retry approved')} />
           </div>
         </>
       ) : (

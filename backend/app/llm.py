@@ -42,8 +42,10 @@ Payment:
 
 Pick ONE action from {actions}.
 Rules of thumb: small-amount UPI failures at odd hours are often transient (retry_soon);
-large card declines are often limits/funds (retry_tomorrow with a payment link);
-repeated failures deserve give_up. Draft a short, polite customer SMS (max 2 sentences,
+large card declines are often limits/funds (retry_tomorrow with a payment link).
+HARD RULE on repeat failures: if attempts so far >= 2, you MUST choose give_up;
+if attempts so far == 1, prefer give_up or a single patient retry_tomorrow —
+never message a customer again after repeated failed recoveries. Draft a short, polite customer SMS (max 2 sentences,
 no pressure tactics, include nothing false). Where the payment link belongs in the
 message, write exactly the placeholder [LINK] — the system substitutes the real URL.
 
