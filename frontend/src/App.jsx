@@ -1,4 +1,24 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+
+function useCountUp(target, duration = 900) {
+  const [val, setVal] = useState(target)
+  const prev = useRef(target)
+  useEffect(() => {
+    const from = prev.current
+    prev.current = target
+    if (from === target) return
+    const t0 = performance.now()
+    let raf
+    const tick = (t) => {
+      const p = Math.min((t - t0) / duration, 1)
+      setVal(Math.round(from + (target - from) * (1 - Math.pow(1 - p, 3))))
+      if (p < 1) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [target, duration])
+  return val
+}
 
 const inr = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 })
 const rupees = (paise) => `₹${inr.format(Math.round(paise / 100))}`
@@ -42,11 +62,12 @@ function StatTiles({ stats }) {
   const inFlight = stats.by_status?.scheduled?.count ?? 0
   const needsHuman = (stats.by_status?.manual_review?.count ?? 0) +
                      (stats.by_status?.merchant_alert?.count ?? 0)
+  const recovered = useCountUp(stats.recovered_amount)
   return (
     <section className="tiles">
       <div className="tile tile-hero">
         <div className="tile-label">Revenue recovered</div>
-        <div className="tile-value hero">{rupees(stats.recovered_amount)}</div>
+        <div className="tile-value hero">{rupees(recovered)}</div>
         <div className="tile-sub">of {rupees(stats.total_amount)} failed</div>
       </div>
       <div className="tile">
@@ -167,7 +188,7 @@ export default function App() {
   return (
     <div className="page">
       <header>
-        <div className="brand">Reclaim <span className="brand-sub">failed-payment recovery agent</span></div>
+        <div className="brand"><a className="brand-link" href="#/">Reclaim</a> <span className="brand-sub">failed-payment recovery agent</span></div>
         <div className="clock" title="Simulated time — recovery plays span days, so the demo clock fast-forwards">
           <span className="clock-label">sim clock</span> {clock}
         </div>
