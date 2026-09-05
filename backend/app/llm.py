@@ -25,8 +25,13 @@ import httpx
 # burst past it. Two lanes + the 429 retry keeps nearly every call real.
 _gate = threading.Semaphore(2)
 
-GEMINI_MODEL = "gemini-2.5-flash"
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+DEFAULT_MODEL = "gemini-2.5-flash"
+
+
+def _model() -> str:
+    # overridable so a drained free-tier quota can be dodged by switching to a
+    # sibling model (each has its own quota bucket) without a code change
+    return os.environ.get("GEMINI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
 
 ACTIONS = ["retry_soon", "retry_tomorrow", "send_link_and_message", "give_up"]
 
@@ -78,11 +83,13 @@ def decide(ctx: dict) -> dict:
     prompt = PROMPT.format(rupees=ctx["amount"] / 100, method=ctx["method"],
                            reason=ctx["reason"], failed_at=ctx["failed_at"],
                            attempts=ctx["attempts"], actions=ACTIONS)
+    model = _model()
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     try:
         with _gate:
             for attempt in (1, 2):  # one retry, only for free-tier rate limiting
                 resp = httpx.post(
-                    GEMINI_URL, params={"key": api_key}, timeout=30,
+                    url, params={"key": api_key}, timeout=30,
                     json={"contents": [{"parts": [{"text": prompt}]}],
                           "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}},
                 )
@@ -96,7 +103,7 @@ def decide(ctx: dict) -> dict:
         if out.get("action") not in ACTIONS:
             raise ValueError(f"invalid action {out.get('action')!r}")
         out["wait_minutes"] = max(0, int(out.get("wait_minutes", 30)))
-        out["engine"] = f"gemini:{GEMINI_MODEL}"
+        out["engine"] = f"gemini:{model}"
         return out
     except Exception as exc:  # LLM failure must never take down recovery
         fallback = _heuristic(ctx)
