@@ -176,6 +176,7 @@ export default function App() {
 
   const act = async (fn, label) => {
     setBusy(true)
+    setToast('Working… live Gemini + Razorpay calls can take up to a minute')
     try {
       const out = await fn()
       if (label) setToast(`${label}${out.retries_executed != null ? ` — ${out.retries_executed} retries ran` : ''}`)
@@ -195,7 +196,7 @@ export default function App() {
       </header>
 
       <div className="controls">
-        <button disabled={busy} onClick={() => act(() => post('/reset').then(() => post('/ingest/demo')), 'Fresh batch ingested')}>
+        <button disabled={busy} onClick={() => act(() => post('/reset').then(() => post('/ingest/demo?limit=60')), 'Fresh batch ingested')}>
           ⟳ Reset + ingest demo batch
         </button>
         <span className="control-sep">fast-forward:</span>
